@@ -11,7 +11,9 @@ removeAllButton.addEventListener("click",()=>{ ul.remove(); });
 
 var getlist=document.getElementsByClassName("mycheck")[0];
 var getinput=document.getElementById("check")
-
+var date=new Date();
+var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+document.getElementById('displayDate').innerHTML=`${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()}`
 
 
 function addItem(){
@@ -46,7 +48,7 @@ function addItem(){
      ul.appendChild(li);
      li.appendChild(checkbox);
      li.appendChild(label);
-     ul.insertBefore(li,ul.childNodes[0])//to insert your new todo at top
+     //ul.insertBefore(li,ul.childNodes[0])//to insert your new todo at top
      
      //for delay so that could clearly see todos getting added to list
      setTimeout(()=>{
